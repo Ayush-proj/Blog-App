@@ -1,16 +1,43 @@
-# React + Vite
+# 🌐 Blog-App Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend of the Blog-App, built with **React 19** and **Vite**. It provides a high-performance, responsive UI for reading and managing blog posts.
 
-Currently, two official plugins are available:
+## 🚀 Key Features
+- **Modern Interface**: Designed with Tailwind CSS 4 for a sleek, contemporary look.
+- **State Management**: Powered by **Zustand** for efficient global state handling.
+- **Dark Mode**: Built-in support for light/dark themes via `themeStore`.
+- **Form Handling**: Integrated with **React Hook Form** for seamless user input.
+- **Protected Routes**: Custom routing logic to secure user and admin areas.
+- **Toast Notifications**: Interactive feedback for user actions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- **Framework**: React 19 + Vite
+- **Styling**: Tailwind CSS 4 + Lucide Icons
+- **State Store**: Zustand
+- **Routing**: React Router 7
+- **API Client**: Axios
 
-## React Compiler
+## 🏃 Local Development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Expanding the ESLint configuration
+2. Configure Environment:
+   Create a `.env` file:
+   ```env
+   VITE_API_URL=http://localhost:3001/api
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+## 📂 Directory Structure
+- `src/components`: UI building blocks (Navbar, PostCard, etc.)
+- `src/pages`: Main view components (HomePage, AdminDashboard, etc.)
+- `src/store`: Zustand stores for Auth, Theme, and Posts.
+- `src/services`: API abstraction layer.
+- `src/styles`: Global CSS and Tailwind configurations.
