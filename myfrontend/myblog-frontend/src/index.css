@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "./styles/animations.css";
+
+@layer base {
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 3.9%;
+  }
+}
+
+/* 🎨 Dropdown Animations */
+@keyframes slideDownAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpAndFade {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+.animate-in {
+  animation: slideDownAndFade 200ms ease-out;
+}
+
+.animate-out {
+  animation: slideUpAndFade 150ms ease-in;
+}
+
+/* Smooth transitions for dropdown items */
+.dropdown-item-hover {
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}   
